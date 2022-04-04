@@ -1,4 +1,4 @@
-products=[]
+mercado=[]
 while(True):
     print("supermercado")
     print("***************")
@@ -11,30 +11,30 @@ while(True):
     option=int(input("ingrese una option:"))
     
     if(option==1):
-        lista=input("registre un producto:")
-        products.append(lista)
+        lista=input("añada un producto:")
+        mercado.append(lista)
 
     elif(option==2):
-            print(products)
+            print(mercado)
 
     elif(option==3):
-        print(products)
+        print(mercado)
         cambiar_nombre=input("nombre del producto a cambiar:")
-        mercado=False
-        for i in range(0,len(products)):
-            if(cambiar_nombre==products[i]):
+        carrito=False
+        for i in range(0,len(mercado)):
+            if(cambiar_nombre==mercado[i]):
                 nuevo_nombre=input("Digite el nombre del nuevo producto:")
-                products[i]=nuevo_nombre
-                print(products) 
-                mercado=True
+                mercado[i]=nuevo_nombre
+                print(mercado) 
+                carrito=True
 
     elif(option==4):
-        print (products)
+        print (mercado)
         eliminar_producto=input("Digite el producto a sacar del carro de compras:")
-        for i in range(0,len(products)):
-            if(eliminar_producto==products[i]):
-                products.pop(i)  
-        print(products)
+        for i in range(0,len(mercado)):
+            if(eliminar_producto==mercado[i]):
+                mercado.pop(i)  
+        print(mercado)
     elif(option==5):
         print("compra finalizada!")
         break
